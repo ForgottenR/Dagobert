@@ -439,7 +439,8 @@ namespace Dagobert
       return !contextMenuEntries.Any((e) => e.Name.Equals("adjust price", StringComparison.CurrentCultureIgnoreCase)
                                         || e.Name.Equals("preis ändern", StringComparison.CurrentCultureIgnoreCase)
                                         || e.Name.Equals("価格を変更する", StringComparison.CurrentCultureIgnoreCase)
-                                        || e.Name.Equals("changer le prix", StringComparison.CurrentCultureIgnoreCase));
+                                        || e.Name.Equals("changer le prix", StringComparison.CurrentCultureIgnoreCase)
+                                        || e.Name.Equals("修改价格", StringComparison.CurrentCultureIgnoreCase));
     }
 
     private unsafe bool? DelayMarketBoard()
