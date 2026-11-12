@@ -17,6 +17,12 @@ public class MannequinDetectionTests
     Assert.That(AutoPinch.IsItemMannequin([localizedLabel, "Remove"], localizedLabel), Is.False);
   }
 
+  [TestCase("修改价格", "调整价格")]
+  public void ChineseMenuAliasIsAccepted(string menuEntry, string localizedLabel)
+  {
+    Assert.That(AutoPinch.IsItemMannequin([menuEntry, "Remove"], localizedLabel), Is.False);
+  }
+
   [TestCase("Display on mannequin")]
   [TestCase("Remove from mannequin")]
   [TestCase("Do not Adjust Price")]

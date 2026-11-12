@@ -1,4 +1,4 @@
-﻿using Dalamud.Game.Addon.Lifecycle;
+using Dalamud.Game.Addon.Lifecycle;
 using Dalamud.Game.Addon.Lifecycle.AddonArgTypes;
 using Dalamud.Game.ClientState.Keys;
 using Dalamud.Interface.Utility;
@@ -486,7 +486,8 @@ namespace Dagobert
     internal static bool IsItemMannequin(IEnumerable<string> contextMenuEntries, string adjustPriceText)
     {
       return string.IsNullOrWhiteSpace(adjustPriceText) ||
-        !contextMenuEntries.Any(name => string.Equals(name, adjustPriceText, StringComparison.OrdinalIgnoreCase));
+        !contextMenuEntries.Any(name => string.Equals(name, adjustPriceText, StringComparison.OrdinalIgnoreCase)
+                                    || string.Equals(name, "修改价格", StringComparison.OrdinalIgnoreCase));
     }
 
     private unsafe bool? DelayMarketBoard()
